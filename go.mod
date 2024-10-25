@@ -1,6 +1,8 @@
 module github.com/go-vgo/robotgo
 
-go 1.17
+go 1.21
+
+toolchain go1.23.1
 
 require (
 	github.com/lxn/win v0.0.0-20210218163916-a377121e959e
@@ -14,11 +16,13 @@ require (
 	github.com/vcaesar/tt v0.20.0
 )
 
+require github.com/kbinani/screenshot v0.0.0-20240820160931-a8a2c5d0e191
+
 require (
-	github.com/gen2brain/shm v0.0.0-20230802011745-f2460f5984f7 // indirect
+	github.com/gen2brain/shm v0.1.0 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
-	github.com/jezek/xgb v1.1.0 // indirect
-	github.com/kbinani/screenshot v0.0.0-20230812210009-b87d31814237
+	github.com/godbus/dbus/v5 v5.1.0 // indirect
+	github.com/jezek/xgb v1.1.1 // indirect
 	github.com/lufia/plan9stats v0.0.0-20230326075908-cb1d2100619a // indirect
 	github.com/otiai10/mint v1.3.0 // indirect
 	github.com/power-devops/perfstat v0.0.0-20221212215047-62379fc7944b // indirect
@@ -28,7 +32,7 @@ require (
 	github.com/tklauser/numcpus v0.6.1 // indirect
 	github.com/yusufpapurcu/wmi v1.2.3 // indirect
 	golang.org/x/image v0.12.0 // indirect
-	golang.org/x/sys v0.12.0 // indirect
+	golang.org/x/sys v0.24.0 // indirect
 )
 
 // replace golang.org/x/sys => github.com/golang/sys v0.0.0-20190109145017-48ac38b7c8cb

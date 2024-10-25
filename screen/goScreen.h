@@ -12,7 +12,6 @@
 #include "../base/pubs.h"
 #include "../base/rgb.h"
 #include "screengrab_c.h"
-#include "screen_c.h"
 #include <stdio.h>
 
 void padHex(MMRGBHex color, char* hex) {
@@ -79,6 +78,14 @@ char* get_XDisplay_name() {
 	#endif
 }
 
+void close_main_display() {
+	#if defined(USE_X11)
+		XCloseMainDisplay();
+	#else
+		// 
+	#endif
+}
+
 uint32_t get_num_displays() {
 	#if defined(IS_MACOSX)
 		uint32_t count = 0;
@@ -118,4 +125,3 @@ MMBitmapRef capture_screen(int32_t x, int32_t y, int32_t w, int32_t h, int32_t d
 	MMBitmapRef bitmap = copyMMBitmapFromDisplayInRect(MMRectInt32Make(x, y, w, h), display_id, isPid);
 	return bitmap;
 }
-
